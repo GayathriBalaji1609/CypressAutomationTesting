@@ -15,7 +15,7 @@
 
   //should move to sign up page if login is unsuccessful
   
-     it('verify login is unsuccessfull and redirect to Signup Page and check the list of fields listed in web page are editable', () => {
+     it('verify login is unsuccessfull and redirect to Signup Page to create new account and login with correct credentials to check the list of fields listed in web page are editable', () => {
     
       //The user should be redirected to the signin page if not authenticated
         cy.visit('https://gayathribalaji1609.github.io/EmptyRepo/'); 
@@ -86,26 +86,6 @@
         // For example, you can assert that the title contains a specific text
         expect(pageTitle).to.include('Cypress Automation Testing Practice Page');
       });
-      }
-          
-      else {
-
-        //correct login credentials to test this case
-        //username = akash@gmail.com
-        //pwd = 1234
-          
-      // Login successful
-      cy.log('Login successful');
-      cy.title().then((pageTitle) => {
-        // Use the pageTitle variable for further assertions or actions
-        cy.log('Page Title:', pageTitle);
-    
-        //The user should be redirected to the users page after login
-        expect(pageTitle).to.include('Cypress Automation Testing Practice Page');
-      });
-      
-      
-
       }
     });
     
