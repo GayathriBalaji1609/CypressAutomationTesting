@@ -107,10 +107,10 @@
       }
     });
     
-    // Navigate to the Cypress Automation Testing page and edit an item
+    //  After login condition is successfull , user should Navigate to the Cypress Automation Testing page and edit an item
 
 
-    // Populate Fields
+    // Populate Username Field
     
     cy.get('#dataInput').type('Gayathri');
 
@@ -136,7 +136,7 @@
     });
     
 
-    // Initially, the submit button should be disabled for 'Add Item'
+    // Initially, the submit button should be disabled for 'Add Item' field
     cy.get('#addItemBtn').should('be.disabled');
 
     // Type a name into the name field
@@ -182,8 +182,15 @@
     // Attempt to edit an Add Item List field with an existing name
     cy.get('#item').type('ListItem1');
 
-    // Click on Submit and save the value entered
+    // Click on Submit 
     cy.get('#addItemBtn').click();
+
+    //items will not saved as the user entered existing item in list and user will get alert message
+    cy.on('window:alert',(t)=>{
+      //assertions
+      expect(t).to.contains('Item already exists: ListItem1');
+    });
+    
 
   //Edit an existing 'Add item' field and populate new value
     cy.get('#item').clear();
@@ -198,7 +205,7 @@
 
   
     // User should be able to click on an existing item and have the drawer open
-    // Open the dropdown item drawer
+    // Open the 'Select Item' Dropdown item drawer
     cy.get('#dropdown').should('exist');
     
 
