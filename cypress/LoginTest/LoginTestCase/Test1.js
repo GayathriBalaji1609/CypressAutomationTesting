@@ -89,6 +89,10 @@
       }
           
       else {
+
+        //correct login credentials to test this case
+        //username = akash@gmail.com
+        //pwd = 1234
           
       // Login successful
       cy.log('Login successful');
@@ -96,12 +100,10 @@
         // Use the pageTitle variable for further assertions or actions
         cy.log('Page Title:', pageTitle);
     
-        // For example, you can assert that the title contains a specific text
+        //The user should be redirected to the users page after login
         expect(pageTitle).to.include('Cypress Automation Testing Practice Page');
       });
-      //The user should be redirected to the users page after login
-            
-      //cy.title(body > div > h1).should('include', 'Cypress Automation Testing Practice Page');
+      
       
 
       }
