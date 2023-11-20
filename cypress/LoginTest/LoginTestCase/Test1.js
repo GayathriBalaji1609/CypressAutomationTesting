@@ -97,7 +97,7 @@
         cy.log('Page Title:', pageTitle);
     
         // For example, you can assert that the title contains a specific text
-        expect(pageTitle).to.include('Expected Title');
+        expect(pageTitle).to.include('Cypress Automation Testing Practice Page');
       });
       //The user should be redirected to the users page after login
             
@@ -107,7 +107,7 @@
       }
     });
     
-    // Navigate to the user page and edit an item
+    // Navigate to the Cypress Automation Testing page and edit an item
 
 
     // Populate Fields
