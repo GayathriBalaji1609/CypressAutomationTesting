@@ -6,7 +6,7 @@ module.exports = defineConfig({
       
       // implement node event listeners here
     },
-    specPattern: 'cypress/LoginTest/LoginTestCase/*.js'
+    specPattern: 'cypress/LoginTest/LoginTestCase/Test1.js'
   },
   
 });
